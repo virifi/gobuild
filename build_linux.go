@@ -61,9 +61,7 @@ func buildGo(outDir string, goArch GoArch, commitHash string) error {
 }
 
 func main() {
-	commitHash := "91191e7b7bc8c0e1a6d49c7a9b3adeb1ab39a423"
-	//commitHash := "714291f2d80bab1599a866f266a4fc6546e61632"
-	//commitHash := "8017ace496f5a21bcd55377e250e325f8ba11d45"
+	commitHash := "8017ace496f5a21bcd55377e250e325f8ba11d45"
 	if err := buildGo("out", GO_ARCH_AMD64, commitHash); err != nil {
 		fmt.Errorf("buildGo Failed : %v\n", err)
 		os.Exit(1)
