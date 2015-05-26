@@ -30,4 +30,6 @@ git fetch
 git checkout $GO_HASH
 #git checkout go1.4.2
 GOROOT_BOOTSTRAP=/go_386 GOOS=linux GOARCH=386 GOROOT_FINAL=/usr/lib/go ./all.bash
+mv /usr/lib/go/bin/linux_386/* /usr/lib/go/bin/
+rm -rf /usr/lib/go/bin/linux_386
 tar -C /usr/lib -cvzf /out/go.linux-386.$GO_HASH.tar.gz go
